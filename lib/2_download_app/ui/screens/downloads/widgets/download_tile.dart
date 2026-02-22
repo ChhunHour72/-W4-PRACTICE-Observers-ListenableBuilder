@@ -11,7 +11,18 @@ class DownloadTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return ListenableBuilder(
+      listenable: controller,
+      builder: (context, child) {
+        
+        return Card(
+          child: ListTile(
+            title: Text(controller.ressource.name),
+
+          ),
+        );
+      },
+    );
      
     // TODO
   }
